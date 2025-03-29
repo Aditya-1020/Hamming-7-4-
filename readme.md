@@ -17,7 +17,8 @@ https://www.youtube.com/watch?v=h0jloehRKas
 
 
 
-Parity bits are extra bits added to enable error detection and correction calculated using XOR
+## Parity bits
+extra bits added to enable error detection and correction calculated using XOR
 Number of parity bits is choosen by 2^{p} >= d + p + 1
 - p is number of parity bits
 - d is  number of data bits -> d+p = total number of bits in codeword
@@ -27,3 +28,5 @@ For hamming(7,4) -> d = 4
 parity bits are placed in powers of two positions
 - how do you place elements in only powers of 2 pos and fill rest spots
 
+
+## Syndrome decoding
