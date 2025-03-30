@@ -5,6 +5,14 @@ Can correct single bit error and dectect two-bit errors.
 
 Get -> Encode -> Check -> Decode
 
+# How to run
+Takes 4 bit binary for input
+
+compile  -> gcc main.c -o main
+Run -> ./main 1011
+
+Note you will recieve -> Error: Input must contain only '0' or '1'.
+
 Wat du..
 - Encode 4-bit data into 7-bit Hamming code using parity rules
     - introduce random bit flip to simulate noise
@@ -30,3 +38,10 @@ parity bits are placed in powers of two positions
 
 
 ## Syndrome decoding
+The main part which checks for errors
+- (7,4) is recieved system recalculates parity bits
+- recalculation produces set of values known as syndrome
+- syndrome is binary number that represents positon of potential error
+    ex: syndrome: 101 (binary 5) indicates error in 5th bit
+
+---
