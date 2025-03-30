@@ -1,17 +1,25 @@
 # Hamming(7,4) Project
 
-Takes 4-bit data and adds 3 parity bits forming 7-bit codeword.
-Can correct single bit error and dectect two-bit errors.
+This project implements Hamming(7,4) encoding and decoding to detect and correct single-bit errors in a 4-bit binary input. The program:
+- Encodes 4-bit data into a 7-bit Hamming code using parity bits.
+- Introduces a random bit flip to simulate noise.
+- Uses syndrome decoding to detect and correct errors.
+- Decodes the 7-bit Hamming code back to the original 4-bit data.
 
-Get -> Encode -> Check -> Decode
+How to Run
 
-# How to run
-Takes 4 bit binary for input
+Compilation
 
-compile  -> gcc main.c -o main
-Run -> ./main 1011
+gcc main.c -o main
 
-Note you will recieve -> Error: Input must contain only '0' or '1'.
+Execution
+
+./main 1011
+
+Note: The program expects a valid 4-bit binary number as input. If an invalid input is provided, an error message will be displayed.
+
+---
+# My notes
 
 Wat du..
 - Encode 4-bit data into 7-bit Hamming code using parity rules
@@ -20,14 +28,10 @@ Wat du..
     - flip the bit back
 - Decode 7-bit Hamming code back to 4-bit data
 
-https://www.youtube.com/watch?v=X8jsijhllIA
-https://www.youtube.com/watch?v=h0jloehRKas
-
-
 
 ## Parity bits
 extra bits added to enable error detection and correction calculated using XOR
-Number of parity bits is choosen by 2^{p} >= d + p + 1
+Number of parity bits is choosen by 2^p \geq d + p + 1
 - p is number of parity bits
 - d is  number of data bits -> d+p = total number of bits in codeword
 For hamming(7,4) -> d = 4
