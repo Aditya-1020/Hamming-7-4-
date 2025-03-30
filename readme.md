@@ -6,10 +6,10 @@ This project implements Hamming(7,4) encoding and decoding to detect and correct
 - Uses syndrome decoding to detect and correct errors.
 - Decodes the 7-bit Hamming code back to the original 4-bit data.
 
-How to Run
+## How to Run
 
-Compilation
-
+### Compilation
+```sh
 gcc main.c -o main
 
 Execution
@@ -17,6 +17,24 @@ Execution
 ./main 1011
 
 Note: The program expects a valid 4-bit binary number as input. If an invalid input is provided, an error message will be displayed.
+
+
+Example Execution
+
+Input
+./main 1011
+
+Output
+
+Received data: 1011
+Encoded data: 0110011
+Array after Bit flipped: 0110001
+Syndrome array before correction: 0 1 1
+Syndrome Value: 6
+Error at position 6 in array
+Corrected Data: 0110011
+```
+
 
 ---
 # My notes
