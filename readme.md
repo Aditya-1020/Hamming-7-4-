@@ -13,7 +13,7 @@ This project implements Hamming(7,4) encoding and decoding to detect and correct
 gcc main.c -o main
 ```
 
-Execution
+### Execution
 
 ```sh
 ./main 1011
@@ -22,13 +22,15 @@ Execution
 Note: The program expects a valid 4-bit binary number as input. If an invalid input is provided, an error message will be displayed.
 
 
-Example Execution
+### Example Execution
 
 Input
+```sh 
 ./main 1011
+```
 
 Output
-
+```sh
 Received data: 1011
 Encoded data: 0110011
 Array after Bit flipped: 0110001
@@ -36,7 +38,7 @@ Syndrome array before correction: 0 1 1
 Syndrome Value: 6
 Error at position 6 in array
 Corrected Data: 0110011
-
+```
 
 
 ---
@@ -69,4 +71,3 @@ The main part which checks for errors
 - syndrome is binary number that represents positon of potential error
     ex: syndrome: 101 (binary 5) indicates error in 5th bit
 
----
