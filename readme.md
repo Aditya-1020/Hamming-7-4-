@@ -11,10 +11,13 @@ This project implements Hamming(7,4) encoding and decoding to detect and correct
 ### Compilation
 ```sh
 gcc main.c -o main
+```
 
 Execution
 
+```sh
 ./main 1011
+```
 
 Note: The program expects a valid 4-bit binary number as input. If an invalid input is provided, an error message will be displayed.
 
@@ -33,7 +36,7 @@ Syndrome array before correction: 0 1 1
 Syndrome Value: 6
 Error at position 6 in array
 Corrected Data: 0110011
-```
+
 
 
 ---
